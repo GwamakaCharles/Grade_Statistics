@@ -1,0 +1,9 @@
+/Users/mac/my_projects/C#/Grades/library/bin/Debug/netstandard2.0/library.deps.json
+/Users/mac/my_projects/C#/Grades/library/bin/Debug/netstandard2.0/library.dll
+/Users/mac/my_projects/C#/Grades/library/bin/Debug/netstandard2.0/library.pdb
+/Users/mac/my_projects/C#/Grades/library/obj/Debug/netstandard2.0/library.csprojAssemblyReference.cache
+/Users/mac/my_projects/C#/Grades/library/obj/Debug/netstandard2.0/library.csproj.CoreCompileInputs.cache
+/Users/mac/my_projects/C#/Grades/library/obj/Debug/netstandard2.0/library.AssemblyInfoInputs.cache
+/Users/mac/my_projects/C#/Grades/library/obj/Debug/netstandard2.0/library.AssemblyInfo.cs
+/Users/mac/my_projects/C#/Grades/library/obj/Debug/netstandard2.0/library.dll
+/Users/mac/my_projects/C#/Grades/library/obj/Debug/netstandard2.0/library.pdb

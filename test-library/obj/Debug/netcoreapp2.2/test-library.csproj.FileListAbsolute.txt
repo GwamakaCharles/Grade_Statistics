@@ -1,0 +1,17 @@
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/test-library.deps.json
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/test-library.runtimeconfig.json
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/test-library.runtimeconfig.dev.json
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/test-library.dll
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/test-library.pdb
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/library.dll
+/Users/mac/my_projects/C#/Grades/test-library/bin/Debug/netcoreapp2.2/library.pdb
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.csprojAssemblyReference.cache
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.csproj.CoreCompileInputs.cache
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.AssemblyInfoInputs.cache
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.AssemblyInfo.cs
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.csproj.CopyComplete
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.dll
+/Users/mac/my_projects/C#/Grades/test-library/obj/Debug/netcoreapp2.2/test-library.pdb

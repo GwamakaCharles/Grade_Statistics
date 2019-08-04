@@ -1,0 +1,14 @@
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.AssemblyInfoInputs.cache
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.AssemblyInfo.cs
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/app.deps.json
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/app.runtimeconfig.json
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/app.dll
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/app.pdb
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/library.dll
+/Users/mac/my_projects/C#/Grades/app/bin/Debug/netcoreapp2.2/library.pdb
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.csproj.CopyComplete
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.dll
+/Users/mac/my_projects/C#/Grades/app/obj/Debug/netcoreapp2.2/app.pdb
