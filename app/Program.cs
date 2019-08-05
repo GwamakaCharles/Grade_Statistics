@@ -8,7 +8,13 @@ namespace app
     {
         static void Main(string[] args)
         {
+            //Envoking an event i.e NameChanged, to display the name change.
             GradeBook book = new GradeBook();
+            book.NameChanged += OnNameChanged;
+            book.Name = "Warren's Grade Book!";
+            book.Name = "Grade Book!";
+
+            //Adding grades to the grades list.
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
@@ -19,7 +25,9 @@ namespace app
             WriteLine("The Average Grade", stats.AverageGrade);
         }
 
-        private static void WriteLine(string description, float grade) => System.Console.WriteLine($"{description}: {grade:F2}");
+        private static void WriteLine(string description, float result) => System.Console.WriteLine($"{description}: {result:F2}");
+
+        static void OnNameChanged(object sender, NameChangedEventArgs args) => Console.WriteLine($"Grade book changing name from {args.ExistingName} to {args.NewName}");
     }
 }
 
