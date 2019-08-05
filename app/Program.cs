@@ -14,6 +14,9 @@ namespace app
             book.AddGrade(91);            
             book.AddGrade(89.5f);
             book.AddGrade(75);
+            
+            //Prints to the console the list of grades added
+            book.WriteGrades(Console.Out);
 
             GradeStatistics stats = book.ComputeStatistics();
             WriteLine("Highest Grade",stats.HighestGrade);

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.IO;
 
 namespace library
 {
@@ -34,7 +34,16 @@ namespace library
                 }  
             }
         }
-        
+
+        //This method lists the list of grades added
+        public void WriteGrades(TextWriter destination)
+        {
+            for (int i = 0; i < grades.Count; i++)
+            {
+                Console.WriteLine(grades[i]);
+            }
+        }
+
         public void AddGrade(float grade) => grades.Add(grade);
 
         public GradeStatistics ComputeStatistics()
