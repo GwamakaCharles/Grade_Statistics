@@ -64,7 +64,6 @@ namespace test_library
         //Then
             Assert.Equal(89.1f, grades[1]);
         }
-
         private void AddGrades(float[] grades) => grades[1] = 89.1f;
     }
 }
