@@ -11,6 +11,8 @@ namespace library
             grades = new List<float>();
         }
         List<float> grades;
+
+        public string Name;
         public void AddGrade(float grade) => grades.Add(grade);
 
         public GradeStatistics ComputeStatistics()

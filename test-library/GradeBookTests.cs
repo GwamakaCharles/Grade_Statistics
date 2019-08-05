@@ -1,3 +1,4 @@
+using System;
 using library;
 using Xunit;
 
@@ -39,6 +40,31 @@ namespace test_library
             Assert.Equal(85.16, result.AverageGrade, 1);
         }
 
+        [Fact]
+        public void GradeBookVariablesHoldAReference()
+        {
+        //Given
+            GradeBook g1 = new GradeBook();
+        //When
+            GradeBook g2 = g1;
+            // g1 = new GradeBook();
+        //Then
+            g1.Name = "Warren is a beautiful Name!";
+            Assert.Equal(g2.Name, g1.Name);
+        }
 
+        [Fact]
+        public void UsingArrays()
+        {
+        //Given
+            float[] grades;
+            grades = new float[3];
+        //When
+            AddGrades(grades);
+        //Then
+            Assert.Equal(89.1f, grades[1]);
+        }
+
+        private void AddGrades(float[] grades) => grades[1] = 89.1f;
     }
 }
