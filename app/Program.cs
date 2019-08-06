@@ -8,7 +8,7 @@ namespace app
     {
         static void Main(string[] args)
         {
-            GradeBook book = CreateGradebook();
+            GradeTracker book = CreateGradebook();
 
             GetBookName(book);
 
@@ -19,12 +19,12 @@ namespace app
             WriteResults(book);
         }
 
-        private static GradeBook CreateGradebook()
+        private static GradeTracker CreateGradebook()
         {
             return new ThrowAwayGradeBook();
         }
 
-        private static void WriteResults(GradeBook book)
+        private static void WriteResults(GradeTracker book)
         {
             GradeStatistics stats = book.ComputeStatistics();
             WriteLine("Highest Grade", stats.HighestGrade);
@@ -33,7 +33,7 @@ namespace app
             WriteLine(stats.Description, stats.LetterGrade);
         }
 
-        private static void SaveGrades(GradeBook book)
+        private static void SaveGrades(GradeTracker book)
         {
             //prints the grades into a grades.txt file.
             using (StreamWriter outputFile = File.CreateText("grades.txt"))
@@ -42,7 +42,7 @@ namespace app
             }
         }
 
-        private static void AddGrades(GradeBook book)
+        private static void AddGrades(GradeTracker book)
         {
             //Adding grades to the grades list.
             book.AddGrade(91);
@@ -50,7 +50,7 @@ namespace app
             book.AddGrade(75);
         }
 
-        private static void GetBookName(GradeBook book)
+        private static void GetBookName(GradeTracker book)
         {
             //handle the exception if the name of a grade book is set to null or empty.
             try

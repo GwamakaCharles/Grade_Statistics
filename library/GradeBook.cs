@@ -4,7 +4,7 @@ using System.IO;
 
 namespace library
 {
-    public class GradeBook
+    public class GradeBook : GradeTracker
     {
         public GradeBook()
         {
@@ -13,33 +13,9 @@ namespace library
         }
         protected List<float> grades;
 
-        public event NameChangedDelegate NameChanged;
-        private string _name;
-        public string Name
-        {
-            get { return _name; }
-            set 
-            { 
-                //throw an exception if the name of a gradebook is set to null or empty!
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentException("Name can not be null or empty!");
-                }
-
-                if (_name != value && NameChanged != null)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-
-                        NameChanged(this, args);
-                    }
-                _name = value; 
-            }
-        }
 
         //This method lists the list of grades added
-        public void WriteGrades(StreamWriter destination)
+        public override void WriteGrades(TextWriter destination)
         {
             for (int i = 0; i < grades.Count; i++)
             {
@@ -47,9 +23,9 @@ namespace library
             }
         }
 
-        public void AddGrade(float grade) => grades.Add(grade);
+        public override void AddGrade(float grade) => grades.Add(grade);
 
-        public virtual GradeStatistics ComputeStatistics()
+        public override GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
 
