@@ -20,9 +20,13 @@ namespace library
             get { return _name; }
             set 
             { 
-                if(!String.IsNullOrEmpty(value))
+                //throw an exception if the name of a gradebook is set to null or empty!
+                if (String.IsNullOrEmpty(value))
                 {
-                    if (_name != value)
+                    throw new ArgumentException("Name can not be null or empty!");
+                }
+
+                if (_name != value && NameChanged != null)
                     {
                         NameChangedEventArgs args = new NameChangedEventArgs();
                         args.ExistingName = _name;
@@ -30,13 +34,12 @@ namespace library
 
                         NameChanged(this, args);
                     }
-                    _name = value; 
-                }  
+                _name = value; 
             }
         }
 
         //This method lists the list of grades added
-        public void WriteGrades(TextWriter destination)
+        public void WriteGrades(StreamWriter destination)
         {
             for (int i = 0; i < grades.Count; i++)
             {
