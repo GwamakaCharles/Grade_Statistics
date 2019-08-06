@@ -8,7 +8,7 @@ namespace app
     {
         static void Main(string[] args)
         {
-            GradeBook book = new GradeBook();
+            GradeBook book = CreateGradebook();
 
             GetBookName(book);
 
@@ -17,6 +17,11 @@ namespace app
             SaveGrades(book);
 
             WriteResults(book);
+        }
+
+        private static GradeBook CreateGradebook()
+        {
+            return new ThrowAwayGradeBook();
         }
 
         private static void WriteResults(GradeBook book)

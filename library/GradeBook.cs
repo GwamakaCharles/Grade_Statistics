@@ -11,7 +11,7 @@ namespace library
             _name = "Empty";
             grades = new List<float>();
         }
-        List<float> grades;
+        protected List<float> grades;
 
         public event NameChangedDelegate NameChanged;
         private string _name;
@@ -49,7 +49,7 @@ namespace library
 
         public void AddGrade(float grade) => grades.Add(grade);
 
-        public GradeStatistics ComputeStatistics()
+        public virtual GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
 
