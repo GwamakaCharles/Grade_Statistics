@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -13,15 +14,19 @@ namespace library
         }
         protected List<float> grades;
 
-
-        //This method lists the list of grades added
-        public override void WriteGrades(TextWriter destination)
+        public override IEnumerator GetEnumerator()
         {
-            for (int i = 0; i < grades.Count; i++)
-            {
-                Console.WriteLine(grades[i]);
-            }
+            return grades.GetEnumerator();   
         }
+
+        // //This method lists in a txt file the list of grades added
+        // public override void WriteGrades(TextWriter destination)
+        // {
+        //     for (int i = 0; i < grades.Count; i++)
+        //     {
+        //         Console.WriteLine(grades[i]);
+        //     }
+        // }
 
         public override void AddGrade(float grade) => grades.Add(grade);
 

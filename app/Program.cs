@@ -8,24 +8,31 @@ namespace app
     {
         static void Main(string[] args)
         {
-            GradeTracker book = CreateGradebook();
+            IGradeTracker book = CreateGradebook();
 
             GetBookName(book);
 
             AddGrades(book);
 
-            SaveGrades(book);
+            // SaveGrades(book);
 
             WriteResults(book);
         }
 
-        private static GradeTracker CreateGradebook()
+        private static IGradeTracker CreateGradebook()
         {
             return new ThrowAwayGradeBook();
         }
 
-        private static void WriteResults(GradeTracker book)
+        private static void WriteResults(IGradeTracker book)
         {
+            //Display the grades in a console
+            foreach (float grade in book)
+            {
+                Console.WriteLine(grade);
+            }
+
+            //Display the statistics
             GradeStatistics stats = book.ComputeStatistics();
             WriteLine("Highest Grade", stats.HighestGrade);
             WriteLine("Lowest Grade", stats.LowestGrade);
@@ -33,16 +40,16 @@ namespace app
             WriteLine(stats.Description, stats.LetterGrade);
         }
 
-        private static void SaveGrades(GradeTracker book)
-        {
-            //prints the grades into a grades.txt file.
-            using (StreamWriter outputFile = File.CreateText("grades.txt"))
-            {
-                book.WriteGrades(outputFile);
-            }
-        }
+        // //Save grades in a txt file
+        // private static void SaveGrades(IGradeTracker book)
+        // {
+        //     using (StreamWriter outputFile = File.CreateText("grades.txt"))
+        //     {
+        //         book.WriteGrades(outputFile);
+        //     }
+        // }
 
-        private static void AddGrades(GradeTracker book)
+        private static void AddGrades(IGradeTracker book)
         {
             //Adding grades to the grades list.
             book.AddGrade(91);
@@ -50,7 +57,7 @@ namespace app
             book.AddGrade(75);
         }
 
-        private static void GetBookName(GradeTracker book)
+        private static void GetBookName(IGradeTracker book)
         {
             //handle the exception if the name of a grade book is set to null or empty.
             try

@@ -13,6 +13,8 @@ namespace library
             }
             grades.Remove(lowest);
 
+            Console.WriteLine($"Removed the lowest grade: {lowest}");
+            
             return base.ComputeStatistics();
         }
     }
