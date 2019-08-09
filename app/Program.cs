@@ -27,12 +27,16 @@ namespace app
         private static void WriteResults(IGradeTracker book)
         {
             //Display the grades in a console
+            Console.WriteLine("________________________________");
+            Console.WriteLine("The grades you've entered are:");
             foreach (float grade in book)
             {
                 Console.WriteLine(grade);
             }
+            Console.WriteLine("________________________________");
 
             //Display the statistics
+            Console.WriteLine("The statistics  for the grades are:");
             GradeStatistics stats = book.ComputeStatistics();
             WriteLine("Highest Grade", stats.HighestGrade);
             WriteLine("Lowest Grade", stats.LowestGrade);
@@ -52,11 +56,13 @@ namespace app
         private static void AddGrades(IGradeTracker book)
         {
             //Adding grades to the grades list.
-            book.AddGrade(91);
-            book.AddGrade(89.5f);
-            book.AddGrade(75);
+            Console.WriteLine("Please enter four grades:");
+            for (int i = 0; i < 4; i++)
+            {
+                float input = float.Parse(Console.ReadLine());
+                book.AddGrade(input);
+            }
         }
-
         private static void GetBookName(IGradeTracker book)
         {
             //handle the exception if the name of a grade book is set to null or empty.
